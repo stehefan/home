@@ -1,0 +1,30 @@
+.infoSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 850px) {
+    flex-direction: row;
+    width: 800px;
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+
+
+  &__image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: .5rem 1rem;
+  }
+
+  &__content {
+
+  }
+}
