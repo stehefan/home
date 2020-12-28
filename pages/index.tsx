@@ -2,8 +2,12 @@ import Head from 'next/head';
 import InfoSection from '../components/InfoSection/InfoSection.module';
 import SocialIcon from '../components/SocialIcon/SocialIcon.module';
 import SocialIconList from '../components/SocialIconList/SocialIconList.module';
+import React from 'react';
+import moment from 'moment';
 
 const Home: React.FC = () => {
+    const age: number = moment().diff([1986,2,27], 'years');
+
     return (
         <>
             <Head>
@@ -11,7 +15,7 @@ const Home: React.FC = () => {
             </Head>
             <h1 style={{textAlign: 'center'}}>Moin!</h1>
             <InfoSection image={'avatar_one.jpg'}>
-                Hej, my name is Stefan, I'm a <span id="age-label">34</span> year old from Salzwedel, now living in
+                Hej, my name is Stefan, I'm a {age} year old from Salzwedel, now living in
                 Hamburg. In between, I have been living in Hanover, studying <i>Applied Informatics</i> at the <i>University
                 of Applied Science and Arts Hannover</i>. During that time, I was working as a research associate at
                 the <a href="http://sw-architecture.inform.hs-hannover.de/joomla/index.php/team">Software
