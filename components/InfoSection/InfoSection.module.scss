@@ -1,11 +1,13 @@
+@import "../../styles/variables";
+
 .infoSection {
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  @media (min-width: 850px) {
+  @media (min-width: $breakpoint + px) {
     flex-direction: row;
-    width: 800px;
+    width: $contentWidth + px;
 
     &:nth-of-type(even) {
       flex-direction: row-reverse;
@@ -19,8 +21,6 @@
 
   &__image {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
     margin: .5rem 1rem;
   }
 
