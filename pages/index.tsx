@@ -36,9 +36,9 @@ const Home: React.FC = () => {
                 platforms linked to down below.
             </InfoSection>
             <SocialIconList>
-                <SocialIcon href='https://www.github.com/stehefan' name='github' />
-                <SocialIcon href='https://www.linkedin.com/in/stefan-lier-44682583/' name='linkedin' />
-                <SocialIcon href='https://www.xing.com/profile/Stefan_Lier3' name='xing' />
+                <SocialIcon href='https://www.github.com/stehefan' name='Github'/>
+                <SocialIcon href='https://www.linkedin.com/in/stefan-lier-44682583/' name='LinkedIn'/>
+                <SocialIcon href='https://www.xing.com/profile/Stefan_Lier3' name='Xing'/>
             </SocialIconList>
         </>
     )
