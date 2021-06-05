@@ -22,7 +22,7 @@ const Home: React.FC = () => {
                 Architecture Research Group</a>, researching event-based communication between machines.
             </InfoSection>
             <InfoSection image={'avatar_two.jpg'}>
-                Since 2015 I am working as a Consultant at <a href="https://www.netlight.com/">Netlight
+                Since 2014 I am working as a Consultant at <a href="https://www.netlight.com/">Netlight
                 Consulting</a>, first in Munich, Germany and now in Hamburg, Germany. My goal is helping our clients
                 to achieve something great in their projects, developing software, managing infrastructure and
                 growing teams. I love my work and the people I work with on a daily basis and am eager to see where
