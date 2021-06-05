@@ -7,17 +7,50 @@ on:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout source-code
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS Environment
+        uses: actions/setup-node@v1
         with:
           node-version: '14'
-      - run: yarn install
-      - run: yarn build
-      - run: yarn export
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build NextJS Application
+        run: yarn build
+
+      - name: Export static site content
+        run: yarn export
+
       - name: Upload build output
         uses: actions/upload-artifact@v2
         with:
           name: build-output
           path: out/
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: 'eu-central-1'
+      AWS_BUCKET_NAME: '314522435747-home-website'
+    steps:
+      - name: Get build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-output
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync content to S3
+        run: s3 sync . s3://{{ env.AWS_BUCKET_NAME}}
