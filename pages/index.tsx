@@ -18,11 +18,11 @@ const Home: React.FC = () => {
                 Hej, my name is Stefan, I'm a {age} year old from Salzwedel, now living in
                 Hamburg. In between, I have been living in Hanover, studying <i>Applied Informatics</i> at the <i>University
                 of Applied Science and Arts Hannover</i>. During that time, I was working as a research associate at
-                the <a href="http://sw-architecture.inform.hs-hannover.de/joomla/index.php/team">Software
+                the <a target="_blank" rel="noreferrer" href="http://sw-architecture.inform.hs-hannover.de/joomla/index.php/team">Software
                 Architecture Research Group</a>, researching event-based communication between machines.
             </InfoSection>
             <InfoSection name="Work" image={'avatar_two.jpg'}>
-                Since 2014 I am working as a Consultant at <a href="https://www.netlight.com/">Netlight
+                Since 2014 I am working as a Consultant at <a target="_blank" rel="noreferrer" href="https://www.netlight.com/">Netlight
                 Consulting</a>, first in Munich, Germany and now in Hamburg, Germany. My goal is helping our clients
                 to achieve something great in their projects, developing software, managing infrastructure and
                 growing teams. I love my work and the people I work with on a daily basis and am eager to see where

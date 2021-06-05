@@ -8,7 +8,7 @@ type SocialIconProps = {
 
 const SocialIcon: React.FC<SocialIconProps> = ({href, name}) => {
     return <span className={styles.socialIcon}>
-        <a href={href} className={styles.socialIcon__link} target='_blank'>
+        <a href={href} className={styles.socialIcon__link} target='_blank' rel="noreferrer">
             <img width={50} className={styles.socialIcon__image} src={`/${name.toLowerCase()}.svg`}
                  alt={`Link to ${name}`}/>
         </a>
