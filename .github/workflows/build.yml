@@ -58,9 +58,7 @@ jobs:
 
       - name: Get Cloudfront distribution
         id: get-cloudfront-id
-        run: |
-          DIST_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Enabled].Id" --output text)
-          echo '::set-output name=DIST_ID::$DIST_ID'
+        run: echo '::set-output name=dist_id::$(aws cloudfront list-distributions --query "DistributionList.Items[?Enabled].Id" --output text)'
 
       - name: Invalidate Cloudfront Caches
-        run: aws cloudfront create-invalidation --distribution-id ${{ steps.get-cloudfront-id.outputs.DIST_ID }} --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ steps.get-cloudfront-id.outputs.dist_id }} --paths "/*"
