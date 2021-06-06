@@ -63,4 +63,4 @@ jobs:
           echo '::set-output name=DIST_ID::$DIST_ID'
 
       - name: Invalidate Cloudfront Caches
-        run: aws cloudfront create-invalidation --distribution-id ${{ steps.get-cloudfront-id.outputs.DIST_ID }}" --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ steps.get-cloudfront-id.outputs.DIST_ID }} --paths "/*"
