@@ -59,7 +59,7 @@ jobs:
       - name: Get Cloudfront distribution
         id: get-cloudfront-id
         run: |
-          DIST_ID=$(aws cloudfront list-distributions --profile user --query "DistributionList.Items[?Enabled].Id" --output text)
+          DIST_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Enabled].Id" --output text)
           echo '::set-output name=DIST_ID::$DIST_ID'
 
       - name: Invalidate Cloudfront Caches
