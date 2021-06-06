@@ -55,3 +55,12 @@ jobs:
 
       - name: Sync content to S3
         run: aws s3 sync . s3://$AWS_BUCKET_NAME --delete
+
+      - name: Get Cloudfront distribution
+        id: get-cloudfront-id
+        run: |
+          DIST_ID=$(aws cloudfront list-distributions --profile user --query "DistributionList.Items[?Enabled].Id" --output text)
+          echo '::set-output name=DIST_ID::$DIST_ID'
+
+      - name: Invalidate Cloudfront Caches
+        run: aws cloudfront create-invalidation --distribution-id ${{ steps.get-cloudfront-id.outputs.DIST_ID }}" --paths "/*"
