@@ -38,7 +38,6 @@ const Home: React.FC = () => {
             <SocialIconList>
                 <SocialIcon href='https://www.github.com/stehefan' name='Github'/>
                 <SocialIcon href='https://www.linkedin.com/in/stefan-lier-44682583/' name='LinkedIn'/>
-                <SocialIcon href='https://www.xing.com/profile/Stefan_Lier3' name='Xing'/>
             </SocialIconList>
         </>
     )
