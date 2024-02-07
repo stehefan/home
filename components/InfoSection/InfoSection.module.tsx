@@ -4,9 +4,11 @@ import React from 'react';
 type InfoSectionProps = {
     image: string;
     name: string;
+    children?: React.ReactNode;
+
 }
 
-const InfoSection: React.FC<InfoSectionProps> = ({image, name, children}) => {
+const InfoSection: React.FunctionComponent<InfoSectionProps> = ({image, name, children}) => {
     return <div className={styles.infoSection}>
         <img src={`/${image}`} className={styles.infoSection__image} width={100} height={100}
              alt={`Avatar for ${name}-Section`}/>
