@@ -24,9 +24,6 @@ jobs:
       - name: Build NextJS Application
         run: yarn build
 
-      - name: Export static site content
-        run: yarn export
-
       - name: Upload build output
         uses: actions/upload-artifact@v2
         with:
