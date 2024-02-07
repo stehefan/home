@@ -2,7 +2,6 @@ import Head from 'next/head';
 import InfoSection from '../components/InfoSection/InfoSection.module';
 import SocialIcon from '../components/SocialIcon/SocialIcon.module';
 import SocialIconList from '../components/SocialIconList/SocialIconList.module';
-import React from 'react';
 import moment from 'moment';
 
 const Home: React.FC = () => {

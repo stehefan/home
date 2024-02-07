@@ -1,5 +1,4 @@
 import '../styles/main.scss'
-import React from 'react';
 
 type AppProps = {
     Component: any;
