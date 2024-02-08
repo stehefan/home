@@ -5,7 +5,7 @@ type AppProps = {
     pageProps: any
 }
 
-const App: React.FC<AppProps> = ({Component, pageProps}) => {
+const App: React.FunctionComponent<AppProps> = ({Component, pageProps}) => {
     return <Component {...pageProps}/>;
 }
 
