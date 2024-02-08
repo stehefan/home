@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>stefan - coding, lifting, living</title>
+    <meta name="description" content="Private Home in the internet for Stefan Lier">
+    <link rel="shortcut icon" href="/public/favicon.png">
+    <link rel="icon" type="image/png" href="/public/favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/public/favicon.png" sizes="96x96">
+    <link rel="apple-touch-icon" href="/public/favicon.png" sizes="180x180">
+    <style>
+        html {
+            font-family: sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            --color-bg: black;
+            --color-fg: #b3b2b4;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            font-family: Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            line-height: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 100vh;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            border: 1px solid var(--color-fg);
+        }
+
+        .info {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            margin: 0.5rem 0;
+        }
+
+        .socialIcon {
+            filter: invert(1);
+            opacity: 0.5;
+            transition: opacity ease-in-out 150ms;
+        }
+
+        .socialIcon:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <img src="/public/avatar.jpg" class="avatar" width="300" height="300" alt="Image of Stefan Lier">
+    <div class="info">
+        <a href="https://www.linkedin.com/in/stefan-lier-44682583/" target="_blank" rel="noreferrer"
+           aria-label="Link to Stefans LinkedIn Profile">
+            <img src="/public/linkedin.svg" class="socialIcon" width="50" alt="Link to Stefans LinkedIn Profile">
+        </a>
+        <a href="https://www.github.com/stehefan" target="_blank" rel="noreferrer"
+           aria-label="Link to Stefans Github Profile">
+            <img src="/public/github.svg" class="socialIcon" width="50" alt="Link to Stefans Github Profile">
+        </a>
+    </div>
+</div>
+</body>
+</html>
