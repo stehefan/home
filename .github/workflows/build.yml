@@ -13,22 +13,14 @@ jobs:
       - name: Checkout source-code
         uses: actions/checkout@v2
 
-      - name: Setup NodeJS Environment
-        uses: actions/setup-node@v1
-        with:
-          node-version: '21'
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build NextJS Application
-        run: yarn build
-
       - name: Upload build output
         uses: actions/upload-artifact@v2
         with:
           name: build-output
-          path: out/
+          path: |
+            public/
+            index.html
+
 
   deploy:
     name: Deploy
